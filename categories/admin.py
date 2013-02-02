@@ -1,8 +1,10 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
+from django.contrib import admin
+
 from taxonomy.admin import TaxonAdmin
-from category_tree.models import Category
+from taxonomy.contrib.category_tree.models import Category
 
 class CategoryAdmin(TaxonAdmin):
     list_display = ('title', 'breadcrumb')
